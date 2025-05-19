@@ -32,6 +32,7 @@ public class Exam04Controller {
         user.setAge(userForm.getAge());
         user.setComment(userForm.getComment());
         model.addAttribute("user", user);
+        return "exam04-result";
     }
 
 }

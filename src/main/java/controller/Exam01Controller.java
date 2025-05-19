@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @org.springframework.stereotype.Controller
-@Repository("exam01")
+@Repository("/exam01")
 public class Exam01Controller {
 
     @GetMapping("")
@@ -16,6 +16,6 @@ public class Exam01Controller {
 
     @PostMapping("/result")
     public String result(String name, Model model){
-        return "result";
+        return "exam01-result";
     }
 }

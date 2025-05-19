@@ -5,7 +5,9 @@
     <title>名前を表示する</title>
 </head>
 <body>
-<form action="">
+<form action=""
+method="post"
+th:action="@{/exam01/result}">
     名前：<input type="text" name="name" id="">
 
     <button type="submit">送信</button>

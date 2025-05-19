@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class Exam02Controller {
 
     @Autowired
-    HttpSession session;
+    private HttpSession session;
 
     @GetMapping("")
     public String index(){

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 @Controller
@@ -45,7 +46,7 @@ public class ShoppingCartController {
         }
 
         if((List<Item>)session.getAttribute("shoppingList") == null){
-            session.setAttribute("shoppingList", new ArrayList<Item>());
+            session.setAttribute("shoppingList", new LinkedList<Item>());
         }
 
         int totalPrice = getTotalPrice();
@@ -56,7 +57,6 @@ public class ShoppingCartController {
 
     @PostMapping("/inCart")
     public String inCart(int itemIndex){
-        System.out.println("itemIndex=" + itemIndex);
         final List<Item> itemList =  (List<Item>)application.getAttribute("itemList");
         List<Item> shoppingList =  (List<Item>)session.getAttribute("shoppingList");
         shoppingList.add(itemList.get(itemIndex)); //選択された商品を買い物かごに入れる

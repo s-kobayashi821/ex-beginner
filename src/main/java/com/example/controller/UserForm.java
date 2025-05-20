@@ -1,12 +1,12 @@
 package com.example.controller;
 
-import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 public class UserForm {
-    @NotBlank(message="名前は必須です")
+
+    @NotBlank(message = "名前は必須です")
     private String name;
 
     @NotNull(message = "年齢を入力してください")
